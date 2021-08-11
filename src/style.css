@@ -1,6 +1,7 @@
 html {
   font-size: 15px;
   background-color: #c4e0f9;
+  font-family: 'Roboto', sans-serif;
 }
 body {
   width: 30rem;
@@ -87,6 +88,10 @@ h1 {
   height: 5rem;
   width: auto;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.palette-square-active {
+  border: 2px solid #b95f89;
+  transition: 0.5s;
 }
 
 .palette-square:focus {
