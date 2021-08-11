@@ -1,0 +1,38 @@
+{
+  "name": "pixelart",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "e2e": "cypress open",
+    "e2e:ci": "cypress run",
+    "devserver": "serve ./src",
+    "eslint:ci": "eslint src",
+    "eslint": "eslint src --fix",
+    "prettier:ci": "prettier src --check",
+    "prettier": "prettier src --write"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/glissario/pixelart.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/glissario/pixelart/issues"
+  },
+  "homepage": "https://github.com/glissario/pixelart#readme",
+  "devDependencies": {
+    "cypress": "^8.2.0",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.24.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-promise": "^5.1.0",
+    "prettier": "^2.3.2",
+    "serve": "^12.0.0"
+  }
+}

@@ -28,19 +28,30 @@ h1 {
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
-.edit-section {
+.input-dimension {
   display: flex;
-  margin-top: 1rem;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  background-color: #67aaf9;
 }
+
 .input-size {
   margin-bottom: 2rem;
   align-self: center;
   border: 0;
+  text-align: left;
+  height: 2rem;
+  width: 10rem;
 }
+.dimension-btn-area {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dimension-btn {
+  width: 25%;
+}
+
 .palette {
   display: grid;
   width: 30rem;
@@ -49,8 +60,25 @@ h1 {
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
+.edit-section {
+  display: flex;
+  flex-direction: row;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  align-items: center;
+  justify-content: center;
+  background-color: #67aaf9;
+}
+
+.checkbox-area {
+  width: 20%;
+}
+
 .new-color {
-  margin-bottom: 3rem;
+  width: 40%;
+}
+.refresh-btn {
+  width: 40%;
 }
 
 .palette-square {
@@ -59,7 +87,6 @@ h1 {
   height: 5rem;
   width: auto;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  _margin-bottom: 2rem;
 }
 
 .palette-square:focus {
