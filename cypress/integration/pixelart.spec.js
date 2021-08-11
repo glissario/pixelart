@@ -12,7 +12,7 @@ describe('PixelArt', () => {
     cy.get('[data-test=palette]').should('exist');
     cy.get('[data-test=palette-square]')
       .should('exist')
-      .should('have.length', '10');
+      .should('have.length', '12');
 
     cy.get('[data-test=art-field]').should('exist');
     cy.get('[data-test=field-square]')
@@ -23,7 +23,7 @@ describe('PixelArt', () => {
     cy.get('[data-test=dim-btn1]').should('exist').click();
     cy.get('[data-test=palette-square]')
       .should('exist')
-      .should('have.length', '8');
+      .should('have.length', '12');
     cy.get('[data-test=field-square]')
       .should('exist')
       .should('have.length', '64');
