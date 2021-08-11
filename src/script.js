@@ -8,9 +8,14 @@ size.addEventListener('keydown', keyInit);
 
 function keyInit(e) {
   if (e.keyCode === 13) {
-    globalSize = event.target.value;
-    initPalette(event.target.value);
-    initField(event.target.value);
+    let value = event.target.value;
+    if (value > 32) {
+      value = 32;
+    }
+    globalSize = value;
+    initPalette(12);
+    initField(value);
+    event.target.value = '';
     event.target.removeEventListener('keydown', initSite);
     for (let i = 0; i < dimensionBtn.length; i++) {
       dimensionBtn[i].removeEventListener('click', buttonInit);
@@ -23,7 +28,7 @@ for (let i = 0; i < dimensionBtn.length; i++) {
 
 function buttonInit() {
   globalSize = event.target.value;
-  initPalette(event.target.value);
+  initPalette(12);
   initField(event.target.value);
   event.target.removeEventListener('keydown', initSite);
   for (let i = 0; i < dimensionBtn.length; i++) {
@@ -55,7 +60,7 @@ function renderPalette(parent, fieldx) {
   const square = document.createElement('div');
   square.classList = 'palette-square';
   square.setAttribute('data-test', 'palette-square');
-  const paletteHeight = 30 / globalSize + 'rem';
+  const paletteHeight = 30 / 12 + 'rem';
   square.style.height = paletteHeight;
   square.setAttribute('x-axis', fieldx);
   square.setAttribute('y-axis', 0);
@@ -222,12 +227,15 @@ function refreshSite() {
     dimensionBtn[i].addEventListener('click', buttonInit);
   }
   size.addEventListener('keydown', keyInit);
+  size.value = '';
   const delPalette = document.querySelectorAll('.palette-square');
   for (let i = 0; i < delPalette.length; i++) {
     delPalette[i].remove();
   }
   const delPaletteActive = document.querySelector('.palette-square-active');
-  delPaletteActive.remove();
+  if (delPaletteActive !== null) {
+    delPaletteActive.remove();
+  }
   const delSquare = document.querySelectorAll('.square');
   for (let i = 0; i < delSquare.length; i++) {
     delSquare[i].remove();
