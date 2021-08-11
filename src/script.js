@@ -63,7 +63,12 @@ function renderPalette(parent, fieldx) {
   square.style.backgroundColor = backgroundColor;
   square.setAttribute('data-bg-color', backgroundColor);
   square.addEventListener('click', function () {
+    const active = document.querySelector('.palette-square-active');
+    if (active !== null) {
+      active.classList = 'palette-square';
+    }
     globalColor = event.target.style.backgroundColor;
+    event.target.classList = 'palette-square-active';
   });
   parent.appendChild(square);
 }
@@ -153,7 +158,6 @@ function fillTool(event) {
       getField(globalSize - 2, globalSize - 2);
       getField(globalSize - 2, globalSize - 1);
     } else {
-      console.log(xAxis + ' ' + yAxis);
       for (let i = -1; i < 2; i++) {
         getField(globalSize - 1, yAxis - i);
         getField(globalSize - 2, yAxis - i);
@@ -222,6 +226,8 @@ function refreshSite() {
   for (let i = 0; i < delPalette.length; i++) {
     delPalette[i].remove();
   }
+  const delPaletteActive = document.querySelector('.palette-square-active');
+  delPaletteActive.remove();
   const delSquare = document.querySelectorAll('.square');
   for (let i = 0; i < delSquare.length; i++) {
     delSquare[i].remove();
