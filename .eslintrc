@@ -2,7 +2,6 @@
   "extends": ["prettier"],
   "plugins": ["prettier"],
   "rules": {
-    "prettier/prettier": 2, // Means error
-    "eqeqeq": [1, "smart"]
+    "prettier/prettier": 2 // Means error
   }
 }
