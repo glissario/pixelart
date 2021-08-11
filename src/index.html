@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header class="header" data-test="header">
+      <h1>Pixel-Art</h1>
+      <div class="input-dimension">
+        <label class="label">Insert fieldsize:</label>
+        <input
+          type="number"
+          class="input-size"
+          id="input-size"
+          autofocus
+          data-test="input-size"
+          placeholder="custom dimension"
+        />
+      </div>
+      <div class="dimension-btn-area" id="dimension-btn-area">
+        <button class="dimension-btn" data-test="dim-btn1" value="8">8*8</button
+        ><button class="dimension-btn" data-test="dim-btn2" value="12">
+          12*12</button
+        ><button class="dimension-btn" data-test="dim-btn3" value="16">
+          16*16</button
+        ><button class="dimension-btn" data-test="dim-btn4" value="32">
+          32*32
+        </button>
+      </div>
+    </header>
+    <main>
+      <div class="palette" id="palette" data-test="palette"></div>
+
+      <section class="edit-section">
+        <div class="checkbox-area">
+          <label class="label">Fill-Tool:</label>
+          <input
+            type="checkbox"
+            id="checkbox"
+            class="checkbox"
+            data-test="checkbox"
+          />
+        </div>
+
+        <button id="new-color" class="new-color" data-test="new-color-button">
+          new Colors
+        </button>
+        <button id="refresh-btn" class="refresh-btn" data-test="refresh-btn">
+          refresh
+        </button>
+      </section>
+      <div class="art-field" id="art-field" data-test="art-field"></div>
+
+      <div class="output" id="output" data-test="output"></div>
+    </main>
+  </body>
+  <script src="script.js"></script>
+</html>
